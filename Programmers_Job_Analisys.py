@@ -361,8 +361,8 @@ if __name__ == "__main__":
         for item in one_count_langs:
             del dict_of_names_and_counts_of_learning_langs[item]
 
-        bar_plotting(dict_of_names_and_counts_of_langs, title='programming langs {} use' .format(persian_english(name_3)), ylabel='counts of each programming lang')
-        bar_plotting(dict_of_names_and_counts_of_learning_langs, title='programming langs {} like to learn' .format(persian_english(name_3)), ylabel='counts of each programming lang')
+        # bar_plotting(dict_of_names_and_counts_of_langs, title='programming langs {} use' .format(persian_english(name_3)), ylabel='counts of each programming lang')
+        # bar_plotting(dict_of_names_and_counts_of_learning_langs, title='programming langs {} like to learn' .format(persian_english(name_3)), ylabel='counts of each programming lang')
 
 
 
