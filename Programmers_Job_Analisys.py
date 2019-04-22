@@ -112,257 +112,257 @@ def split_raw(Dataset):
 
 if __name__ == "__main__":
 
-# # -------------------Number of men and women participate in this poll----------------------
-#     men = data[data["gender"] == "مرد"]
-#     women = data[data["gender"] == "زن"]
-#     men_women_other = [len(men), len(women), (len(data) - (len(men) + len(women)))]
+# -------------------Number of men and women participate in this poll----------------------
+    men = data[data["gender"] == "مرد"]
+    women = data[data["gender"] == "زن"]
+    men_women_other = [len(men), len(women), (len(data) - (len(men) + len(women)))]
 
-#     labels = ["مرد", "زن", "دیگر"]
+    labels = ["مرد", "زن", "دیگر"]
 
-#     # print("{} men participate in this poll" .format(len(men)))
-#     # print("{} women participate in this poll" .format(len(women)))
-#     # print("{} of who participate in this poll don't say their gender" .format(len(data) - (len(men) + len(women))))
+    # print("{} men participate in this poll" .format(len(men)))
+    # print("{} women participate in this poll" .format(len(women)))
+    # print("{} of who participate in this poll don't say their gender" .format(len(data) - (len(men) + len(women))))
 
-#     # circle_ploting(men_women_other, title="Gender Percantage", wrong=True, labels=labels, explod=3)
+    # circle_ploting(men_women_other, title="Gender Percantage", wrong=True, labels=labels, explod=3)
 
-# # -------------------Salary and Wage----------------------
-#     men_salary = men["salary"]
-#     women_salary = women["salary"]
+# -------------------Salary and Wage----------------------
+    men_salary = men["salary"]
+    women_salary = women["salary"]
 
-#     men_wage = men["wage"]
-#     women_wage = women["wage"]
+    men_wage = men["wage"]
+    women_wage = women["wage"]
 
-#     # print(men_wage.value_counts())
-#     # print(women_wage.value_counts())
+    # print(men_wage.value_counts())
+    # print(women_wage.value_counts())
 
-#     # print(men_salary.value_counts())
-#     # print(women_salary.value_counts())
+    # print(men_salary.value_counts())
+    # print(women_salary.value_counts())
 
-#     explode = (0.05, 0.05, 0.05, 0.05, 0.5, 0.5, 0.5, 0.5)
+    explode = (0.05, 0.05, 0.05, 0.05, 0.5, 0.5, 0.5, 0.5)
 
-#     # circle_ploting(value_and_count(men_wage, "c"), title="Men's wage", wrong=True, labels=value_and_count(men_wage, "v"), explod=7)
-#     # circle_ploting(value_and_count(women_wage, "c"), title="Women's wage", wrong=True, labels=value_and_count(women_wage, "v"), explod=6)
+    # circle_ploting(value_and_count(men_wage, "c"), title="Men's wage", wrong=True, labels=value_and_count(men_wage, "v"), explod=7)
+    # circle_ploting(value_and_count(women_wage, "c"), title="Women's wage", wrong=True, labels=value_and_count(women_wage, "v"), explod=6)
 
-#     # circle_ploting(value_and_count(men_salary, "c"), title="Men's salary", wrong=True, labels=value_and_count(men_salary, "v"), explode=explode)
-#     # circle_ploting(value_and_count(women_salary, "c"), title="Women's salary", wrong=True, labels=value_and_count(women_salary, "v"), explode=explode)
+    # circle_ploting(value_and_count(men_salary, "c"), title="Men's salary", wrong=True, labels=value_and_count(men_salary, "v"), explode=explode)
+    # circle_ploting(value_and_count(women_salary, "c"), title="Women's salary", wrong=True, labels=value_and_count(women_salary, "v"), explode=explode)
 
-#     men_work_experience = men["work_experience"]
-#     women_work_experience = women["work_experience"]
+    men_work_experience = men["work_experience"]
+    women_work_experience = women["work_experience"]
 
 
-#     # for name, data in name_and_data(men_work_experience, men, "work_experience", n_d=None).items():   
-#     #     plt.figure()
-#     #     plt.plot(persian_writing(value_and_count(data["salary"], "v")), value_and_count(data["salary"], "c"), color='g')
+    # for name, data in name_and_data(men_work_experience, men, "work_experience", n_d=None).items():   
+    #     plt.figure()
+    #     plt.plot(persian_writing(value_and_count(data["salary"], "v")), value_and_count(data["salary"], "c"), color='g')
         
-#     #     reshaped_value = ar.reshape(name)
-#     #     correct_name = get_display(reshaped_value)
-#     #     plt.title(correct_name)
+    #     reshaped_value = ar.reshape(name)
+    #     correct_name = get_display(reshaped_value)
+    #     plt.title(correct_name)
 
-#     # plt.show()
+    # plt.show()
 
-#     # for name, data in name_and_data(women_work_experience, women, "work_experience", n_d=None).items():
-#     #     plt.figure()
-#     #     plt.plot(persian_writing(value_and_count(data["salary"], "v")), value_and_count(data["salary"], "c"), color='r')
+    # for name, data in name_and_data(women_work_experience, women, "work_experience", n_d=None).items():
+    #     plt.figure()
+    #     plt.plot(persian_writing(value_and_count(data["salary"], "v")), value_and_count(data["salary"], "c"), color='r')
 
-#     #     reshaped_value = ar.reshape(name)
-#     #     correct_name = get_display(reshaped_value)
-#     #     plt.title(correct_name)
+    #     reshaped_value = ar.reshape(name)
+    #     correct_name = get_display(reshaped_value)
+    #     plt.title(correct_name)
 
-#     # plt.show()
+    # plt.show()
 
-# # -------------------counts of using Programming langs---------------------
-#     langs = []
-#     programming_lang = data["programming_lang"]
+# -------------------counts of using Programming langs---------------------
+    langs = []
+    programming_lang = data["programming_lang"]
 
-#     for raw in programming_lang:
-#         if raw != "برنامه نویسی نمی‌کنم":
-#             for lang in raw.split(", "):
-#                 langs.append(lang)
+    for raw in programming_lang:
+        if raw != "برنامه نویسی نمی‌کنم":
+            for lang in raw.split(", "):
+                langs.append(lang)
 
-#     langs_name = Counter(langs).keys()
-#     langs_count = Counter(langs).values()
+    langs_name = Counter(langs).keys()
+    langs_count = Counter(langs).values()
 
 
-#     dict_of_names_and_counts = dict(zip(langs_name, langs_count))
+    dict_of_names_and_counts = dict(zip(langs_name, langs_count))
 
-#     one_counts = []
-#     for name, count in dict_of_names_and_counts.items():
-#         if count < 5:
-#             one_counts.append(name)
+    one_counts = []
+    for name, count in dict_of_names_and_counts.items():
+        if count < 5:
+            one_counts.append(name)
 
-#     for item in one_counts:
-#         del dict_of_names_and_counts[item]
+    for item in one_counts:
+        del dict_of_names_and_counts[item]
             
-#     # bar_plotting(dict_of_names_and_counts, title='programming langs and their counts', ylabel='counts of each programming lang')
+    # bar_plotting(dict_of_names_and_counts, title='programming langs and their counts', ylabel='counts of each programming lang')
 
-# # -------------------counts of using working fields------------------------
-#     works = []
-#     working_field = data["working_field"]
+# -------------------counts of using working fields------------------------
+    works = []
+    working_field = data["working_field"]
 
-#     for raw in working_field:
-#         for work in raw.split(", "):
-#             works.append(work)
+    for raw in working_field:
+        for work in raw.split(", "):
+            works.append(work)
 
-#     works_name = Counter(works).keys()
-#     works_count = Counter(works).values()
+    works_name = Counter(works).keys()
+    works_count = Counter(works).values()
 
-#     names_and_counts_of_works = dict(zip(works_name, works_count))
+    names_and_counts_of_works = dict(zip(works_name, works_count))
 
-#     one_work = []
-#     for name, count in names_and_counts_of_works.items():
-#         if count == 1:
-#             one_work.append(name)
+    one_work = []
+    for name, count in names_and_counts_of_works.items():
+        if count == 1:
+            one_work.append(name)
 
-#     for item in one_work:
-#         del names_and_counts_of_works[item]
+    for item in one_work:
+        del names_and_counts_of_works[item]
     
 
-#     # bar_plotting(names_and_counts_of_works, title='works and counts of each work', ylabel='counts of each work')
+    # bar_plotting(names_and_counts_of_works, title='works and counts of each work', ylabel='counts of each work')
 
-# # -------------------works of each ender in each work experience--------------------
+# -------------------works of each ender in each work experience--------------------
 
-#     for name in name_and_data(men_work_experience, men, "work_experience", n_d="n"):
-#         men_works = []
-#         men_working_experience = men[men["work_experience"] == name]
-#         for raw in men_working_experience["working_field"]:
-#             for work in raw.split(", "):
-#                 men_works.append(work)
+    for name in name_and_data(men_work_experience, men, "work_experience", n_d="n"):
+        men_works = []
+        men_working_experience = men[men["work_experience"] == name]
+        for raw in men_working_experience["working_field"]:
+            for work in raw.split(", "):
+                men_works.append(work)
 
-#         men_works_name = Counter(men_works).keys()
-#         men_works_count = Counter(men_works).values()
+        men_works_name = Counter(men_works).keys()
+        men_works_count = Counter(men_works).values()
 
-#         names_and_counts_of_men_works = dict(zip(men_works_name, men_works_count))
+        names_and_counts_of_men_works = dict(zip(men_works_name, men_works_count))
 
-#         men_one_works = []
-#         for names, count in names_and_counts_of_men_works.items():
-#             if count == 1:
-#                 men_one_works.append(names)
+        men_one_works = []
+        for names, count in names_and_counts_of_men_works.items():
+            if count == 1:
+                men_one_works.append(names)
 
-#         for item in men_one_works:
-#             del names_and_counts_of_men_works[item]
+        for item in men_one_works:
+            del names_and_counts_of_men_works[item]
             
-#         reshaped_value = ar.reshape(name)
-#         name = get_display(reshaped_value)
+        reshaped_value = ar.reshape(name)
+        name = get_display(reshaped_value)
 
-#         # bar_plotting(names_and_counts_of_men_works, title='{}' .format(name), ylabel='counts of each work')
+        # bar_plotting(names_and_counts_of_men_works, title='{}' .format(name), ylabel='counts of each work')
 
-#     for name in name_and_data(women_work_experience, women, "work_experience", n_d="n"):
-#         women_works = []
-#         women_working_experience = women[women["work_experience"] == name]
-#         for raw in women_working_experience["working_field"]:
-#             for work in raw.split(", "):
-#                 women_works.append(work)
+    for name in name_and_data(women_work_experience, women, "work_experience", n_d="n"):
+        women_works = []
+        women_working_experience = women[women["work_experience"] == name]
+        for raw in women_working_experience["working_field"]:
+            for work in raw.split(", "):
+                women_works.append(work)
 
-#         women_works_name = Counter(women_works).keys()
-#         women_works_count = Counter(women_works).values()
+        women_works_name = Counter(women_works).keys()
+        women_works_count = Counter(women_works).values()
 
-#         names_and_counts_of_women_works = dict(zip(women_works_name, women_works_count))
+        names_and_counts_of_women_works = dict(zip(women_works_name, women_works_count))
 
-#         reshaped_value = ar.reshape(name)
-#         name = get_display(reshaped_value)
+        reshaped_value = ar.reshape(name)
+        name = get_display(reshaped_value)
 
-#         # bar_plotting(names_and_counts_of_women_works, title='{}' .format(name), ylabel='counts of each work')
-
-
-# # -------------------working fields for each salary and work experience-----------------------
-#     salary = data["salary"]
-#     for name in name_and_data(salary, data, "salary", n_d="n"):
-#         data_salary = data[data["salary"] == name]
-#         data_work_experience = data_salary["work_experience"]
-#         for name_2 in name_and_data(data_work_experience, data_salary, "work_experience", n_d="n"):
-#             data_works = []
-#             working_experience_of_each_salary = data_salary[data_salary["work_experience"] == name_2]
-#             for raw_2 in working_experience_of_each_salary["working_field"]:
-#                 for work in raw_2.split(", "):
-#                     data_works.append(work)
-
-#             data_works_name = Counter(data_works).keys()    
-#             data_works_count = Counter(data_works).values()
-
-#             names_and_counts_of_works_of_data = dict(zip(data_works_name, data_works_count))
-
-#             reshaped_value = ar.reshape(name)
-#             reshaped_value = ar.reshape(name_2)
-#             name = get_display(reshaped_value)
-#             name_2 = get_display(reshaped_value)
-
-#             # bar_plotting(names_and_counts_of_works_of_data, title='{} & {}' .format(name, name_2), ylabel=":))))))")    
-
-# -------------------programming field for each working field-----------------------
-    # all_of_working_field = []
-    # for raw_3 in data["working_field"]:
-    #     for work_2 in raw_3.split(", "):
-    #         all_of_working_field.append(work_2)
-
-    # all_of_working_field_name = Counter(all_of_working_field).keys()
-    # all_of_working_field_count = Counter(all_of_working_field).values()
-
-    # name_and_counts_of_working_field = dict(zip(all_of_working_field_name, all_of_working_field_count))
-
-    # one_works = []
-    # for names, count in name_and_counts_of_working_field.items():
-    #     if count == 1:
-    #         one_works.append(names)
-
-    # for item in one_works:
-    #     del name_and_counts_of_working_field[item]
-
-    # for name_3 in Counter(name_and_counts_of_working_field).keys():
-    #     print(name_3)
-        # langs_2 = []
-        # langs_for_learning = []
-        # for row in data["timestamp"]:
-        #     specific_data_by_timestamp = data[data["timestamp"] == row]
-        #     # print(specific_data_by_timestamp["working_field"])
-        #     if str(name_3) in str(specific_data_by_timestamp["working_field"]):
-
-        #         programming_lang = specific_data_by_timestamp["programming_lang"]
-        #         programming_lang_for_learning = specific_data_by_timestamp["programming_lang_for_learning"]
-
-        #         for row_2 in programming_lang:
-        #             for lang in row_2.split(", "):
-        #                 langs_2.append(lang)
-
-        #         for row_3 in programming_lang_for_learning:
-        #             for learning_lang in str(row_3).split(", "):
-        #                 langs_for_learning.append(learning_lang)
-
-        # langs_name_2 = Counter(langs_2).keys()
-        # langs_count_2 = Counter(langs_2).values()
-
-        # learning_langs_name = Counter(langs_for_learning).keys()
-        # learning_langs_count = Counter(langs_for_learning).values()
-
-        # ln2 = []
-        # lfl = []
-        # for l_n_2 in langs_name_2:
-        #     ln2.append(persian_english(l_n_2))
-
-        # for l_f_l in learning_langs_name:
-        #     lfl.append(persian_english(l_f_l))
+        # bar_plotting(names_and_counts_of_women_works, title='{}' .format(name), ylabel='counts of each work')
 
 
-        # dict_of_names_and_counts_of_langs = dict(zip(ln2, langs_count_2))
-        # dict_of_names_and_counts_of_learning_langs = dict(zip(lfl, learning_langs_count))        
+# -------------------working fields for each salary and work experience-----------------------
+    salary = data["salary"]
+    for name in name_and_data(salary, data, "salary", n_d="n"):
+        data_salary = data[data["salary"] == name]
+        data_work_experience = data_salary["work_experience"]
+        for name_2 in name_and_data(data_work_experience, data_salary, "work_experience", n_d="n"):
+            data_works = []
+            working_experience_of_each_salary = data_salary[data_salary["work_experience"] == name_2]
+            for raw_2 in working_experience_of_each_salary["working_field"]:
+                for work in raw_2.split(", "):
+                    data_works.append(work)
 
-        # one_counts = []
-        # for name, count in dict_of_names_and_counts_of_langs.items():
-        #     if count == 1:
-        #         one_counts.append(name)
+            data_works_name = Counter(data_works).keys()    
+            data_works_count = Counter(data_works).values()
 
-        # for item in one_counts:
-        #     del dict_of_names_and_counts_of_langs[item]
+            names_and_counts_of_works_of_data = dict(zip(data_works_name, data_works_count))
 
-        # one_count_langs = []
-        # for name, count in dict_of_names_and_counts_of_learning_langs.items():
-        #     if count == 1:
-        #         one_count_langs.append(name)
+            reshaped_value = ar.reshape(name)
+            reshaped_value = ar.reshape(name_2)
+            name = get_display(reshaped_value)
+            name_2 = get_display(reshaped_value)
 
-        # for item in one_count_langs:
-        #     del dict_of_names_and_counts_of_learning_langs[item]
+            # bar_plotting(names_and_counts_of_works_of_data, title='{} & {}' .format(name, name_2), ylabel=":))))))")    
 
-        # bar_plotting(dict_of_names_and_counts_of_langs, title='programming langs {} use' .format(persian_english(name_3)), ylabel='counts of each programming lang')
-        # bar_plotting(dict_of_names_and_counts_of_learning_langs, title='programming langs {} like to learn' .format(persian_english(name_3)), ylabel='counts of each programming lang')
+-------------------programming field for each working field-----------------------
+    all_of_working_field = []
+    for raw_3 in data["working_field"]:
+        for work_2 in raw_3.split(", "):
+            all_of_working_field.append(work_2)
+
+    all_of_working_field_name = Counter(all_of_working_field).keys()
+    all_of_working_field_count = Counter(all_of_working_field).values()
+
+    name_and_counts_of_working_field = dict(zip(all_of_working_field_name, all_of_working_field_count))
+
+    one_works = []
+    for names, count in name_and_counts_of_working_field.items():
+        if count == 1:
+            one_works.append(names)
+
+    for item in one_works:
+        del name_and_counts_of_working_field[item]
+
+    for name_3 in Counter(name_and_counts_of_working_field).keys():
+        print(name_3)
+        langs_2 = []
+        langs_for_learning = []
+        for row in data["timestamp"]:
+            specific_data_by_timestamp = data[data["timestamp"] == row]
+            # print(specific_data_by_timestamp["working_field"])
+            if str(name_3) in str(specific_data_by_timestamp["working_field"]):
+
+                programming_lang = specific_data_by_timestamp["programming_lang"]
+                programming_lang_for_learning = specific_data_by_timestamp["programming_lang_for_learning"]
+
+                for row_2 in programming_lang:
+                    for lang in row_2.split(", "):
+                        langs_2.append(lang)
+
+                for row_3 in programming_lang_for_learning:
+                    for learning_lang in str(row_3).split(", "):
+                        langs_for_learning.append(learning_lang)
+
+        langs_name_2 = Counter(langs_2).keys()
+        langs_count_2 = Counter(langs_2).values()
+
+        learning_langs_name = Counter(langs_for_learning).keys()
+        learning_langs_count = Counter(langs_for_learning).values()
+
+        ln2 = []
+        lfl = []
+        for l_n_2 in langs_name_2:
+            ln2.append(persian_english(l_n_2))
+
+        for l_f_l in learning_langs_name:
+            lfl.append(persian_english(l_f_l))
+
+
+        dict_of_names_and_counts_of_langs = dict(zip(ln2, langs_count_2))
+        dict_of_names_and_counts_of_learning_langs = dict(zip(lfl, learning_langs_count))        
+
+        one_counts = []
+        for name, count in dict_of_names_and_counts_of_langs.items():
+            if count == 1:
+                one_counts.append(name)
+
+        for item in one_counts:
+            del dict_of_names_and_counts_of_langs[item]
+
+        one_count_langs = []
+        for name, count in dict_of_names_and_counts_of_learning_langs.items():
+            if count == 1:
+                one_count_langs.append(name)
+
+        for item in one_count_langs:
+            del dict_of_names_and_counts_of_learning_langs[item]
+
+        bar_plotting(dict_of_names_and_counts_of_langs, title='programming langs {} use' .format(persian_english(name_3)), ylabel='counts of each programming lang')
+        bar_plotting(dict_of_names_and_counts_of_learning_langs, title='programming langs {} like to learn' .format(persian_english(name_3)), ylabel='counts of each programming lang')
 
 
 
