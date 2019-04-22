@@ -288,7 +288,7 @@ if __name__ == "__main__":
 
             # bar_plotting(names_and_counts_of_works_of_data, title='{} & {}' .format(name, name_2), ylabel=":))))))")    
 
--------------------programming field for each working field-----------------------
+# -------------------programming field for each working field-----------------------
     all_of_working_field = []
     for raw_3 in data["working_field"]:
         for work_2 in raw_3.split(", "):
